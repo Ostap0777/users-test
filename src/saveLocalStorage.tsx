@@ -75,22 +75,18 @@ export const users = [
 	},
  ];
  export function saveToLocalStorage() {
-	// Витягування унікальних значень країн
 	const uniqueCountries: Country[] = Array.from(new Set(users.map(user => user.country.value)))
 	  .map(value => users.find(user => user.country.value === value)?.country)
-	  .filter((c): c is Country => c !== undefined); // TypeScript type guard
+	  .filter((c): c is Country => c !== undefined);
  
-	// Витягування унікальних значень відділів
 	const uniqueDepartments: Department[] = Array.from(new Set(users.map(user => user.department.value)))
 	  .map(value => users.find(user => user.department.value === value)?.department)
-	  .filter((d): d is Department => d !== undefined); // TypeScript type guard
+	  .filter((d): d is Department => d !== undefined);
  
-	// Витягування унікальних значень статусів
 	const uniqueStatuses: Status[] = Array.from(new Set(users.map(user => user.status.value)))
 	  .map(value => users.find(user => user.status.value === value)?.status)
-	  .filter((s): s is Status => s !== undefined); // TypeScript type guard
- 
-	// Збереження в localStorage
+	  .filter((s): s is Status => s !== undefined); 
+
 	localStorage.setItem('countries', JSON.stringify(uniqueCountries));
 	localStorage.setItem('departments', JSON.stringify(uniqueDepartments));
 	localStorage.setItem('statuses', JSON.stringify(uniqueStatuses));
