@@ -1,0 +1,80 @@
+.edituser {
+	&__section {
+
+	}
+	&__content {
+		padding: 100px;
+		border: 2px solid black;
+	}
+	&__title {
+		text-align: center;
+		font-size: 24px;
+		line-height: 32px;
+		padding-bottom: 50px;
+		
+	}
+	&__buttons {
+		display: flex;
+		justify-content: flex-end;
+		padding-top: 50px;
+		gap: 20px;
+	}
+	&__button {
+		padding: 10px 30px;
+		border: 1px solid #C4C4C4;
+
+	}
+	&__save {
+		padding: 10px 60px;
+	}
+	&__save:hover {
+		opacity: 0.6;
+	}
+}
+
+
+.user {
+	&__form {
+		display: flex;
+		flex-direction: column;
+		gap: 5px;
+		padding-bottom: 50px;
+	}
+	&__label {
+
+	}
+	&__select {
+		width: 500px;
+		height: 50px;
+		border: 1px solid #E3E8EE;
+	}
+	&__info {
+
+	}
+	&__title {
+		font-size: 20px;
+		line-height: 32px;
+		padding-bottom: 30px;
+	}
+}
+.form {
+	&__items {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 70px;
+	}
+	&__item {
+		display: flex;
+		flex-direction: column;
+		gap: 5px;
+	}
+	&__label {
+		font-size: 14px;
+		color: #5E626B;
+	}
+	&__input{
+		border:2px solid #E3E8EE;
+		height: 50px;
+		padding-left: 20px;
+	}
+}
